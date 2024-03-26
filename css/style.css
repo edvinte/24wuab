@@ -85,18 +85,34 @@
 .nav li {
   display: flex;
   justify-content: center;
-  padding: 5px 20px 5px;
-  margin: 2px;
-  border-radius: 15px;
-  box-shadow: inset #468451 0px -1px 1px;
-  height: 30px;
-  align-items: center;
 }
 
 .nav a {
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding: 5px 20px 5px;
+  margin: 3px;
+  border-radius: 15px;
+  box-shadow: inset #2f6257 0px -1px 1px;
+  height: 30px;
+  width: 20vw;
+  align-items: center;
+  transition: box-shadow 30ms;
+}
+
+.button-text-to-speech:hover {
+  box-shadow: inset #5bbba7 0px -1px 30px;
+}
+
+.button-text-to-text:hover {
+  box-shadow: inset #5bbba7 0px -1px 30px;
+}
+
+.button-text-to-image:hover {
+  box-shadow: inset #5bbba7 0px -1px 30px;
 }
 
 .nav img {
