@@ -11,6 +11,7 @@
   grid-template-rows: auto 1fr auto;
   margin: 0;
   padding: 0%;
+  box-sizing: border-box;
 }
 
 .header {
@@ -21,11 +22,18 @@
   padding: 0px 20px;
   height: 50px;
   box-sizing: border-box;
-  box-shadow: #5b5b5b 0px 0px 2px;
 }
 
 .header h1 {
   font-size: 25px;
+}
+
+.titleText {
+  display: none;
+}
+
+.ham-menu {
+  display: block;
 }
 
 .main {
@@ -36,6 +44,54 @@
   height: 100%;
   box-sizing: border-box;
   flex-direction: column;
+}
+
+.nav {
+  grid-area: nav;
+  display: none;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100vh;
+  align-items: center;
+  padding: 10px 10px 0px;
+  background-color: #171717;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav li {
+  display: flex;
+  justify-content: center;
+  padding: 5px 20px 5px;
+  margin: 2px;
+  border-radius: 15px;
+  box-shadow: inset #468451 0px -1px 1px;
+  height: 30px;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav img {
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.nav-header {
+  font-size: 30px;
+  text-align: center;
 }
 
 .footer {
@@ -78,12 +134,13 @@ body {
 
 .textfield-main input {
   max-width: 740px;
-  width: 90vw;
+  width: 85vw;
   border: 0 inset #878787;
   border-radius: 16px;
   background-color: transparent;
   padding: 17px;
-  box-shadow: #8b8b8b 0px 0px 2px;
+  box-shadow: #171717 0px 10px 10px;
+  border: dashed 1px #2f6257;
   font-size: 16px;
 }
 
@@ -98,6 +155,10 @@ body {
   height: 80px;
 }
 
+.main-img-text-div h4 {
+  font-size: 20px;
+}
+
 @media only screen and (min-width: 480px) {
 }
 
@@ -105,4 +166,24 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
+  .nav {
+    display: flex;
+  }
+  .container {
+    grid-template-areas:
+      "nav header header"
+      "nav main main"
+      "nav footer footer";
+    grid-template-columns: minmax(200px, 1fr) 70% 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+  .ham-menu {
+    display: none;
+  }
+  .img-logo {
+    display: none;
+  }
+  .titleText {
+    display: block;
+  }
 }
