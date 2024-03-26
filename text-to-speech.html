@@ -5,11 +5,32 @@
     <link rel="stylesheet" href="./css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/img-logo.jpg" type="image/x-icon" />
-    <title>GenAI</title>
+    <title>GenAI - Text-to-Speech</title>
   </head>
-  <body style="background-color: #171717">
-    <div class="container-home">
-      <nav id="home-body" class="nav">
+  <body>
+    <div class="container">
+      <header class="header">
+        <img
+          class="img-logo"
+          src="./img/img-logo.svg"
+          alt="logo-image-header"
+        />
+        <h1>Text-to-Speech</h1>
+        <div class="ham-menu">
+          <img src="./img/img-menu.svg" alt="menu-img-header" />
+        </div>
+      </header>
+      <main class="main">
+        <div class="drag-drop-file">
+          <h5 style="color: #d8d8d8; text-align: center">
+            Drag and drop an audio file.
+          </h5>
+        </div>
+        <div class="drag-drop-file-result">
+          <audio src=""></audio>
+        </div>
+      </main>
+      <nav class="nav">
         <img src="./img/img-logo.svg" alt="logo-img-nav" />
         <h3 class="nav-header">GenAI</h3>
         <ul>
@@ -30,6 +51,11 @@
           </li>
         </ul>
       </nav>
+      <footer class="footer">
+        <div class="footer-content">
+          Please be aware that AI-generated images may contain inaccuracies
+        </div>
+      </footer>
     </div>
   </body>
 </html>

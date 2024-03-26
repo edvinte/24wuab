@@ -1,4 +1,4 @@
-.container-text-to-text {
+.container {
   height: 100vh;
   height: 100dvh;
   display: grid;
@@ -41,6 +41,7 @@
 
 .header h1 {
   font-size: 20px;
+  text-align: center;
 }
 
 .ham-menu {
@@ -59,6 +60,7 @@
   height: 100%;
   box-sizing: border-box;
   flex-direction: column;
+  margin: auto;
 }
 
 .nav {
@@ -80,6 +82,7 @@
   width: 80%;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .nav li {
@@ -96,23 +99,23 @@
   padding: 5px 20px 5px;
   margin: 3px;
   border-radius: 15px;
-  box-shadow: inset #2f6257 0px -1px 1px;
+  box-shadow: inset #c8c8c8 0px -2px 2px;
   height: 30px;
-  width: 20vw;
+  width: clamp(200px, 40%, 400px);
   align-items: center;
-  transition: box-shadow 30ms;
+  transition: box-shadow;
 }
 
 .button-text-to-speech:hover {
-  box-shadow: inset #5bbba7 0px -1px 30px;
+  box-shadow: inset #c8c8c8 0px -1px 15px;
 }
 
 .button-text-to-text:hover {
-  box-shadow: inset #5bbba7 0px -1px 30px;
+  box-shadow: inset #c8c8c8 0px -1px 15px;
 }
 
 .button-text-to-image:hover {
-  box-shadow: inset #5bbba7 0px -1px 30px;
+  box-shadow: inset #c8c8c8 0px -1px 15px;
 }
 
 .nav img {
@@ -123,6 +126,11 @@
 .nav-header {
   font-size: 30px;
   text-align: center;
+}
+
+#home-body {
+  display: flex;
+  background-color: #171717;
 }
 
 .footer {
@@ -147,6 +155,11 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
 }
 
 body {
@@ -171,7 +184,7 @@ body {
   background-color: transparent;
   padding: 17px;
   box-shadow: #171717 0px 10px 10px;
-  border: dashed 1px #2f6257;
+  border: dashed 1px #c8c8c8;
   font-size: 16px;
 }
 
@@ -190,17 +203,71 @@ body {
   font-size: 20px;
 }
 
-@media only screen and (min-width: 480px) {
+.display-img-main {
+  display: flex;
+  aspect-ratio: 1/1;
+  justify-content: center;
+  box-shadow: inset 0px 0px 200px rgb(0, 0, 0);
+  width: 95%;
+  max-width: 700px;
+  max-height: 700px;
+  height: 95%;
+  border-radius: 10px;
+  margin: 2vh 2vw 2vh;
+  box-sizing: border-box;
 }
 
-@media only screen and (min-width: 768px) {
+.display-img-main h5 {
+  text-align: center;
+  align-self: center;
+  position: absolute;
+  font-weight: 200;
+}
+
+.display-img-main img {
+  width: 100%;
+}
+
+.drag-drop-file {
+  display: flex;
+  aspect-ratio: 1/1;
+  justify-content: center;
+  box-shadow: inset 0px 0px 50px rgb(0, 0, 0);
+  width: 70vw;
+  max-width: 700px;
+  height: 90%;
+  border-radius: 10px;
+  margin: 2vh 2vw 2vh;
+  box-sizing: border-box;
+  background-color: #171717;
+}
+
+.drag-drop-file h5 {
+  text-align: center;
+  align-self: center;
+  position: absolute;
+  font-weight: 200;
+}
+
+.drag-drop-file-result {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgb(0, 0, 0);
+  width: 100vw;
+  max-width: 800px;
+  max-height: 50px;
+  height: 95%;
+  border-radius: 10px;
+  margin: 0vh 2vw 1vh;
+  box-sizing: border-box;
+  background-color: #000000;
 }
 
 @media only screen and (min-width: 1024px) {
   .nav {
     display: flex;
   }
-  .container-text-to-text {
+  .container {
     grid-template-areas:
       "nav header header"
       "nav main main"
