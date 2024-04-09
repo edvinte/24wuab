@@ -172,11 +172,11 @@ body {
   height: 80%;
 }
 
-.textfield-main {
+#textfield-main {
   display: block;
 }
 
-.textfield-main input {
+#textfield-main input {
   max-width: 740px;
   width: 85vw;
   border: 0 inset #878787;
@@ -188,18 +188,18 @@ body {
   font-size: 16px;
 }
 
-.main-img-text-div {
+#main-img-text-div {
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-content: center;
 }
 
-.main-img-text-div img {
+#main-img-text-div img {
   height: 80px;
 }
 
-.main-img-text-div h4 {
+#main-img-text-div h4 {
   font-size: 20px;
 }
 
